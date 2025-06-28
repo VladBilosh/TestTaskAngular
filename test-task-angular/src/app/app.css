@@ -1,0 +1,330 @@
+body, .dashboard-root {
+  background: #101624;
+  color: #e6eaf6;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.5rem 1rem 2.5rem;
+  background: #151c2e;
+  border-bottom: 1px solid #232b44;
+}
+
+.greeting {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #b2b9d2;
+}
+.tasks {
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.user-avatar {
+  background: linear-gradient(135deg, #3b82f6 0%, #9333ea 100%);
+  color: #fff;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.dashboard-nav {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 2.5rem;
+  background: #151c2e;
+  border-bottom: 1px solid #232b44;
+}
+.nav-item {
+  color: #b2b9d2;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 1.5rem;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.nav-item.active, .nav-item:hover {
+  background: #232b44;
+  color: #fff;
+}
+
+.dashboard-main {
+  padding: 2rem 2.5rem;
+}
+
+.account-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #181f33;
+  border-radius: 1.2rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 12px #0002;
+}
+.account-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.account-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #232b44;
+}
+.account-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+.account-meta {
+  font-size: 0.95rem;
+  color: #b2b9d2;
+  margin-left: 2rem;
+}
+.needs-attention {
+  background: #f59e42;
+  color: #fff;
+  border-radius: 0.7rem;
+  padding: 0.3rem 1rem;
+  font-size: 0.95rem;
+  margin-left: 2rem;
+}
+.account-alerts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #f59e42;
+  font-size: 0.95rem;
+}
+
+.metrics-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.metric-card {
+  background: #181f33;
+  border-radius: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  flex: 1;
+  min-width: 180px;
+  box-shadow: 0 2px 12px #0002;
+}
+.metric-title {
+  color: #b2b9d2;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.metric-value.strong {
+  color: #3b82f6;
+}
+.metric-sub {
+  color: #b2b9d2;
+  font-size: 0.95rem;
+  margin-left: 0.5rem;
+}
+.metric-bars div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.policies-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.policy-card {
+  background: #232b44;
+  color: #fff;
+  border-radius: 0.8rem;
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  flex: 1;
+  text-align: center;
+}
+.policy-card.marine { border-left: 4px solid #3b82f6; }
+.policy-card.liability { border-left: 4px solid #f59e42; }
+.policy-card.workers { border-left: 4px solid #10b981; }
+.policy-card.property { border-left: 4px solid #9333ea; }
+.policy-card.umbrella { border-left: 4px solid #ef4444; }
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.status-steps {
+  display: flex;
+  gap: 1.2rem;
+}
+.step {
+  color: #b2b9d2;
+  background: #232b44;
+  border-radius: 1rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+}
+.step.active {
+  background: #3b82f6;
+  color: #fff;
+}
+.compliance {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: #10b981;
+}
+
+.account-details {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.details-left {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.details-card {
+  background: #232b44;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  color: #b2b9d2;
+  font-size: 0.95rem;
+}
+.details-title {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.details-main {
+  flex: 1;
+}
+.winnability-card {
+  background: #181f33;
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  color: #fff;
+  box-shadow: 0 2px 12px #0002;
+}
+.winnability-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.very-strong {
+  color: #3b82f6;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+.winnability-trend {
+  margin-bottom: 1rem;
+  color: #b2b9d2;
+}
+.winnability-breakdown {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.winnability-breakdown ul {
+  margin: 0.5rem 0 0 0;
+  padding: 0 0 0 1.2rem;
+  color: #e6eaf6;
+  font-size: 0.95rem;
+}
+.ai-recommendations {
+  background: #232b44;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  color: #10b981;
+  margin-top: 1rem;
+}
+.ai-recommendations button {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  margin-top: 0.7rem;
+  cursor: pointer;
+}
+
+.communication-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.comm-card {
+  background: #232b44;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  flex: 1;
+  color: #e6eaf6;
+}
+.comm-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.comm-body {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.comm-card button {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  cursor: pointer;
+}
+
+.policies-table-row {
+  background: #181f33;
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px #0002;
+}
+.policies-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e6eaf6;
+  font-size: 0.98rem;
+}
+.policies-table th, .policies-table td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+}
+.policies-table th {
+  color: #b2b9d2;
+  font-weight: 600;
+  background: #232b44;
+}
+.policies-table tr:nth-child(even) {
+  background: #232b44;
+}
+.policies-table tr:nth-child(odd) {
+  background: #181f33;
+}
