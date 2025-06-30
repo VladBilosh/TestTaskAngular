@@ -7,14 +7,14 @@
     <div class="user-avatar">AR</div>
   </header>
 
-  <nav class="dashboard-nav">
-    <a class="nav-item active">Dashboard</a>
-    <a class="nav-item">Accounts</a>
-    <a class="nav-item">Brokers</a>
-    <a class="nav-item">Submissions</a>
-    <a class="nav-item">Organizations</a>
-    <a class="nav-item">Goals & Rules</a>
-    <a class="nav-item">Admin</a>
+    <nav class="dashboard-nav">
+    <button class="nav-item" routerLink="/accounts" routerLinkActive="active">Accounts</button>
+    <button class="nav-item" routerLink="/dashboard" routerLinkActive="active">Dashboard</button>
+    <button class="nav-item" routerLink="/brokers" routerLinkActive="active">Brokers</button>
+    <button class="nav-item" routerLink="/submissions" routerLinkActive="active">Submissions</button>
+    <button class="nav-item" routerLink="/organizations" routerLinkActive="active">Organizations</button>
+    <button class="nav-item" routerLink="/goals" routerLinkActive="active">Goals & Rules</button>
+    <button class="nav-item" routerLink="/admin" routerLinkActive="active">Admin</button>
   </nav>
 
   <main class="dashboard-main">
@@ -206,6 +206,6 @@
       </table>
     </section>
   </main>
+  <router-outlet></router-outlet>
 </div>
 
-<router-outlet />
