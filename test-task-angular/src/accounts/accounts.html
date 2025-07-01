@@ -1,1 +1,209 @@
-<p>accounts works!</p>
+<div class="dashboard-root">
+  <header class="dashboard-header">
+    <div>
+      <span class="greeting">Hi Arthur, welcome!</span>
+      <span class="tasks">You have <b>12 open tasks.</b></span>
+    </div>
+    <div class="user-avatar">AR</div>
+  </header>
+
+    <nav class="dashboard-nav">
+    <button class="nav-item" routerLink="/accounts" routerLinkActive="active">Accounts</button>
+    <button class="nav-item" routerLink="/dashboard" routerLinkActive="active">Dashboard</button>
+    <button class="nav-item" routerLink="/brokers" routerLinkActive="active">Brokers</button>
+    <button class="nav-item" routerLink="/submissions" routerLinkActive="active">Submissions</button>
+    <button class="nav-item" routerLink="/organizations" routerLinkActive="active">Organizations</button>
+    <button class="nav-item" routerLink="/goals" routerLinkActive="active">Goals & Rules</button>
+    <button class="nav-item" routerLink="/admin" routerLinkActive="active">Admin</button>
+  </nav>
+
+  <main class="dashboard-main">
+    <section class="account-summary">
+      <div class="account-info">
+        <img src="https://placehold.co/64x64" class="account-logo" />
+        <div>
+          <div class="account-name">Maritime Logistics Corp</div>
+          <div class="account-meta">425 Harbor Boulevard, Suite 500<br>Seattle, WA 98104</div>
+        </div>
+        <div class="account-meta">
+          <div>EXISTING ACCOUNT</div>
+          <div>ID: 5438</div>
+        </div>
+        <div class="account-meta">
+          <div>BROKER</div>
+          <div>Marsh McLennan</div>
+        </div>
+        <div class="account-meta">
+          <div>UNDERWRITER</div>
+          <div>Kate Johnson</div>
+        </div>
+        <div class="needs-attention">Needs Attention</div>
+      </div>
+      <div class="account-alerts">
+        <div>Marine Survey Required</div>
+        <div>Loss Control Complete</div>
+        <div>Claims Review Required</div>
+      </div>
+    </section>
+
+    <section class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-title">Winnability</div>
+        <div class="metric-value strong">Very Strong</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Loss Ratio</div>
+        <div class="metric-value">25% <span class="metric-sub">vs 42% target</span></div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Premium Growth</div>
+        <div class="metric-value">12.4% <span class="metric-sub">YoY increase</span></div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Exposure Distribution</div>
+        <div class="metric-bars">
+          <div>Marine Cargo <span>71.4%</span></div>
+          <div>General Liability <span>20%</span></div>
+          <div>Workers Comp <span>8.6%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="policies-row">
+      <div class="policy-card marine">Marine Cargo</div>
+      <div class="policy-card liability">General Liability</div>
+      <div class="policy-card workers">Workers Comp</div>
+      <div class="policy-card property">Property</div>
+      <div class="policy-card umbrella">Umbrella</div>
+    </section>
+
+    <section class="status-row">
+      <div class="status-steps">
+        <span class="step active">Submitted</span>
+        <span class="step">Review</span>
+        <span class="step">Quote</span>
+        <span class="step">Bind</span>
+        <span class="step">Issue</span>
+        <span class="step">Renew</span>
+      </div>
+      <div class="compliance">
+        <span>KYC verification</span>
+        <span>Regulatory approval</span>
+        <span>Required Documentation</span>
+        <span>Financial Verification</span>
+      </div>
+    </section>
+
+    <section class="account-details">
+      <div class="details-left">
+        <div class="details-card">
+          <div class="details-title">DECISION SUPPORT</div>
+          <ul>
+            <li>Winnability</li>
+            <li>Exposure Review & Suggested Coverage</li>
+            <li>Portfolio Strategy Alignment</li>
+            <li>Broker Analysis</li>
+          </ul>
+        </div>
+        <div class="details-card">
+          <div class="details-title">RISK ASSESSMENT</div>
+          <ul>
+            <li>...</li>
+          </ul>
+        </div>
+        <div class="details-card">
+          <div class="details-title">DOCUMENTS AND COMPLIANCE</div>
+          <ul>
+            <li>...</li>
+          </ul>
+        </div>
+      </div>
+      <div class="details-main">
+        <div class="winnability-card">
+          <div class="winnability-header">
+            <div>Winnability</div>
+            <div>Overall Score <b>82%</b> <span class="very-strong">Very Strong</span></div>
+          </div>
+          <div class="winnability-trend">
+            <span>Historical trend</span>
+            <svg width="120" height="32"><!-- trend line --></svg>
+          </div>
+          <div class="winnability-breakdown">
+            <div>
+              <div>Increasing Winnability</div>
+              <ul>
+                <li>Brokers relationship +28%</li>
+                <li>Loss history +22%</li>
+                <li>Industry growth +16%</li>
+                <li>Multiline opportunity +11%</li>
+              </ul>
+            </div>
+            <div>
+              <div>Decreasing Winnability</div>
+              <ul>
+                <li>Premium pricing -24%</li>
+                <li>Total exposure -18%</li>
+                <li>Loss ratio trend -15%</li>
+                <li>Market competition -5%</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ai-recommendations">
+            <b>AI-Powered Recommendations</b>
+            <div>Offer 5% premium discount in exchange for 5-year commitment</div>
+            <button>Apply</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="communication-row">
+      <div class="comm-card">
+        <div class="comm-title">Policy Renewal - Auto Insurance 5/15/25</div>
+        <div class="comm-body">Hello Arthur, this message is regarding the upcoming auto policy renewal...</div>
+        <button>Reply</button>
+      </div>
+      <div class="comm-card">
+        <div class="comm-title">New Quote Request - Workers Comp Insurance</div>
+        <div class="comm-body">Hi Arthur, Real Estate Group has expressed interest in adding workers compensation...</div>
+        <button>Reply</button>
+      </div>
+      <!-- More cards... -->
+    </section>
+
+    <section class="policies-table-row">
+      <table class="policies-table">
+        <thead>
+          <tr>
+            <th>Line</th>
+            <th>Eff Date</th>
+            <th>Exp Date</th>
+            <th>Status</th>
+            <th>Expiring Premium</th>
+            <th>Renewal Total</th>
+            <th>Technical Total</th>
+            <th>Technical Premium</th>
+            <th>Signal Premium</th>
+            <th>Rate Change</th>
+            <th>Loss Ratio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Marine Cargo</td>
+            <td>6/10/2026</td>
+            <td>6/10/2027</td>
+            <td>Active</td>
+            <td>$581,500</td>
+            <td>$605,000</td>
+            <td>$620,000</td>
+            <td>$625,000</td>
+            <td>3.1%</td>
+            <td>23%</td>
+          </tr>
+          <!-- More rows... -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+</div>
