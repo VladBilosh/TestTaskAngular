@@ -14,32 +14,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # .nvmrc вже є у ./test-task-angular, Oryx підхопить Node.js 20.19.0 автоматично
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.19.0'
           cache: 'npm'
-      - name: Build And Deploy
-        id: builddeploy
+          cache-dependency-path: ./test-task-angular/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./test-task-angular
+
+      - name: Build app
+        run: npm run build
+        working-directory: ./test-task-angular
+
+      - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GENTLE_BUSH_08EE8A403}}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GENTLE_BUSH_08EE8A403 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "./test-task-angular"
-          api_location: ""
           output_location: "dist/test-task-angular"
-
-  close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GENTLE_BUSH_08EE8A403}}
-          app_location: "./test-task-angular"
-          action: "close"
