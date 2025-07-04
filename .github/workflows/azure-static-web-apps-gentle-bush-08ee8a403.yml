@@ -11,9 +11,7 @@ on:
 
 jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node.js
@@ -39,7 +37,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "dist/test-task-angular" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-          app_build_command: "" # Optional, if you want to override the default build command
+          
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
