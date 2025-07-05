@@ -310,6 +310,14 @@ html, body {
   margin-left: 2px;
 }
 
+.goal-bar-multi-labels {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.2em;
+  margin-bottom: 0.5em;
+  margin-top: -0.2em;
+}
+
 .quick-actions .quick-btn {
   width: 100%;
   background: #3b82f6;
