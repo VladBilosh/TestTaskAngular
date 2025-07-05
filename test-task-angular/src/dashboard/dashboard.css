@@ -82,11 +82,29 @@ html, body {
   background: #3b82f6;         
   color: #fff;
 }
-.nav-arrow {
-  color: #b2b9d2;
-  font-size: 1.3rem;
-  margin: 0 0.5rem;
+.nav-arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #181f33;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  transition: background 0.2s;
   cursor: pointer;
+  box-shadow: none;
+  padding: 0;
+}
+.nav-arrow-btn:hover {
+  background: #3b82f6;
+}
+.arrow-icon {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1;
 }
 
 .dashboard-main {
@@ -97,14 +115,15 @@ html, body {
   display: flex;
   gap: 2rem;
   margin-bottom: 2rem;
+  align-items: flex-start;
 }
 
 .work-queue {
   background: #181f33;
   border-radius: 1.2rem;
   padding: 1.5rem;
-  flex: 2;
-  min-width: 500px;
+  flex: 2 1 0;
+  min-width: 0;
   box-shadow: 0 2px 12px #0002;
   display: flex;
   flex-direction: column;
@@ -186,11 +205,11 @@ html, body {
 }
 
 .dashboard-side {
+  flex: 1 1 320px;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  flex: 1;
-  min-width: 300px;
+  gap: 1.2rem;
 }
 .portfolio-goals, .quick-actions, .market-intel {
   background: #181f33;
@@ -202,43 +221,99 @@ html, body {
 .goal-label {
   color: #b2b9d2;
   font-size: 0.95rem;
-  margin-top: 0.7rem;
+  margin-top: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
 }
-.goal-bar {
-  background: #232b44;
-  border-radius: 1rem;
-  height: 1.2rem;
-  margin: 0.4rem 0;
+.goal-bar-multi {
   position: relative;
-  display: flex;
+  height: 18px;
+  border-radius: 8px;
+  background: #232b44;
   overflow: hidden;
+  margin-bottom: 0.3rem;
+  margin-top: 0.2rem;
+  display: flex;
 }
-.goal-bar-green { background: #10b981; height: 100%; }
-.goal-bar-yellow { background: #f59e42; height: 100%; }
-.goal-bar-red { background: #ef4444; height: 100%; }
+
+.goal-bar-multi-green {
+  background: #10b981;
+  height: 100%;
+  border-radius: 8px 0 0 8px;
+}
+
+.goal-bar-multi-red {
+  background: #ef4444;
+  height: 100%;
+  border-radius: 0 8px 8px 0;
+}
+
 .goal-bar-value {
   position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%);
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
-  line-height: 1.2rem;
+  pointer-events: none;
 }
-.goal-desc.green { color: #10b981; font-size: 0.95rem; margin-bottom: 0.5rem; }
-.goal-value {
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.1rem;
+
+.goal-desc.green {
+  color: #10b981;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.1rem;
+}
+
+.goal-bar-single {
+  position: relative;
+  height: 18px;
+  border-radius: 8px;
+  background: #232b44;
+  overflow: hidden;
   margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
 }
-.goal-sub { color: #b2b9d2; font-size: 0.95rem; margin-left: 0.5rem; }
+
+.goal-bar-single-fill {
+  background: linear-gradient(90deg, #3b82f6 60%, #2563eb 100%);
+  height: 100%;
+  border-radius: 8px;
+}
+
+.goal-bar-single-value {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 0.97rem;
+  font-weight: 600;
+  background: transparent;
+}
+
+.goal-bar-single-max {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b2b9d2;
+  font-size: 0.97rem;
+  font-weight: 500;
+  background: transparent;
+}
+
+.goal-bar-single-sub {
+  color: #b2b9d2;
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+  margin-left: 2px;
+}
 
 .quick-actions .quick-btn {
   width: 100%;
-  background: #232b44;
-  color: #3b82f6;
+  background: #3b82f6;
+  color: #fff;
   border: none;
   border-radius: 0.7rem;
   padding: 0.7rem 0;
@@ -246,11 +321,23 @@ html, body {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
+
 .quick-actions .quick-btn:hover {
-  background: #3b82f6;
+  background: #60a5fa;
   color: #fff;
+}
+.quick-actions .quick-btn:last-child {
+  background: #fff;
+  color: #3b82f6;
+  border: 1.5px solid #3b82f6;
+}
+
+.quick-actions .quick-btn:last-child:hover {
+  background: #e0eaff;
+  color: #2563eb;
+  border-color: #2563eb;
 }
 
 .market-intel ul {
@@ -340,6 +427,8 @@ html, body {
 .nav-item:hover .nav-icon {
   filter: brightness(0) invert(1); 
 }
+
+
 
 .loss-ratio.green { color: #10b981; font-weight: 600; }
 .loss-ratio.yellow { color: #f59e42; font-weight: 600; }
