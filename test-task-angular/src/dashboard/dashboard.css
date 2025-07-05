@@ -64,17 +64,22 @@ html, body {
 }
 .nav-item {
   color: #b2b9d2;
+  background: #181f33;         
   text-decoration: none;
   padding: 0.5rem 1.2rem;
   border-radius: 1.5rem;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
   cursor: pointer;
   font-size: 1rem;
   display: flex;
   align-items: center;
+  border: 1px solid #232b44;   
+  font-weight: 500;
+  box-shadow: none;
 }
+
 .nav-item.active, .nav-item:hover {
-  background: #232b44;
+  background: #3b82f6;         
   color: #fff;
 }
 .nav-arrow {
@@ -329,6 +334,11 @@ html, body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.nav-item.active .nav-icon,
+.nav-item:hover .nav-icon {
+  filter: brightness(0) invert(1); 
 }
 
 .loss-ratio.green { color: #10b981; font-weight: 600; }
