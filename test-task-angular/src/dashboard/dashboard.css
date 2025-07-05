@@ -45,13 +45,13 @@ html, body {
   flex-shrink: 0;
   display: flex;
   align-items: baseline;
-  gap: 0.7rem;
+  gap: .7rem;
 }
 .search-bar {
   background: #232b44;
   border: none;
   border-radius: 1.2rem;
-  padding: 0.6rem 1.2rem;
+  padding: .6rem 1.2rem;
   color: #e6eaf6;
   font-size: 1rem;
   min-width: 120px;
@@ -71,9 +71,9 @@ html, body {
   color: #b2b9d2;
   background: #181f33;         
   text-decoration: none;
-  padding: 0.5rem 1.2rem;
+  padding: .5rem 1.2rem;
   border-radius: 1.5rem;
-  transition: background 0.2s, color 0.2s;
+  transition: background .2s, color .2s;
   cursor: pointer;
   font-size: 1rem;
   display: flex;
@@ -95,8 +95,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 0.5rem;
-  transition: background 0.2s;
+  margin-left: .5rem;
+  transition: background .2s;
   cursor: pointer;
   box-shadow: none;
   padding: 0;
@@ -144,7 +144,7 @@ html, body {
   background: #232b44;
   color: #b2b9d2;
   border-radius: 1.2rem;
-  padding: 0.4rem 1.2rem;
+  padding: .4rem 1.2rem;
   cursor: pointer;
   font-size: 0.98rem;
 }
@@ -159,7 +159,7 @@ html, body {
   font-size: 0.98rem;
 }
 .queue-table th, .queue-table td {
-  padding: 0.7rem 1rem;
+  padding: .7rem 1rem;
   text-align: left;
 }
 .queue-table th {
@@ -183,14 +183,14 @@ html, body {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  margin-right: 0.7rem;
+  margin-right: .7rem;
 }
 .status-dot {
   display: inline-block;
-  width: 0.7em;
-  height: 0.7em;
+  width: .7em;
+  height: .7em;
   border-radius: 50%;
-  margin-right: 0.4em;
+  margin-right: .4em;
 }
 .status-dot.new { background: #3b82f6; }
 .status-dot.completed { background: #10b981; }
@@ -216,14 +216,14 @@ html, body {
   background: #181f33;
   border-radius: 1.2rem;
   padding: 1.2rem 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   box-shadow: 0 2px 12px #0002;
 }
 .goal-label {
   color: #b2b9d2;
   font-size: 0.95rem;
   margin-top: 1.1rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: .3rem;
   font-weight: 500;
 }
 .goal-bar-multi {
@@ -232,8 +232,8 @@ html, body {
   border-radius: 8px;
   background: #232b44;
   overflow: hidden;
-  margin-bottom: 0.3rem;
-  margin-top: 0.2rem;
+  margin-bottom: .3rem;
+  margin-top: .2rem;
   display: flex;
 }
 .goal-bar-multi-green {
@@ -258,8 +258,8 @@ html, body {
 .goal-desc.green {
   color: #10b981;
   font-size: 0.95rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.1rem;
+  margin-bottom: .5rem;
+  margin-top: .1rem;
 }
 .goal-bar-single {
   position: relative;
@@ -267,8 +267,8 @@ html, body {
   border-radius: 8px;
   background: #232b44;
   overflow: hidden;
-  margin-bottom: 0.2rem;
-  margin-top: 0.2rem;
+  margin-bottom: .2rem;
+  margin-top: .2rem;
 }
 .goal-bar-single-fill {
   background: linear-gradient(90deg, #3b82f6 60%, #2563eb 100%);
@@ -298,15 +298,15 @@ html, body {
 .goal-bar-single-sub {
   color: #b2b9d2;
   font-size: 0.92rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   margin-left: 2px;
 }
 .goal-bar-multi-labels {
   display: flex;
   justify-content: flex-end;
-  gap: 0.2em;
-  margin-bottom: 0.5em;
-  margin-top: -0.2em;
+  gap: .2em;
+  margin-bottom: .5em;
+  margin-top: -.2em;
 }
 .quick-actions .quick-btn {
   width: 100%;
@@ -314,12 +314,12 @@ html, body {
   color: #fff;
   border: none;
   border-radius: 0.7rem;
-  padding: 0.7rem 0;
-  margin-bottom: 0.7rem;
+  padding: .7rem 0;
+  margin-bottom: .7rem;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: background .2s, color .2s;
 }
 .quick-actions .quick-btn:hover {
   background: #60a5fa;
@@ -334,14 +334,14 @@ html, body {
   display: flex;
   align-items: center;
   font-size: 0.97rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: .6rem;
 }
 .dot {
-  width: 0.7em;
-  height: 0.7em;
+  width: .7em;
+  height: .7em;
   border-radius: 50%;
   display: inline-block;
-  margin-right: 0.6em;
+  margin-right: .6em;
 }
 .dot.red { background: #ef4444; }
 .dot.yellow { background: #f59e42; }
@@ -363,10 +363,10 @@ html, body {
   color: #b2b9d2;
   border: none;
   border-radius: 1.2rem;
-  padding: 0.5rem 1.2rem;
+  padding: .5rem 1.2rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background .2s;
 }
 .new-btn {
   background: #3b82f6;
@@ -380,7 +380,7 @@ html, body {
   font-size: 0.98rem;
 }
 .accounts-table th, .accounts-table td {
-  padding: 0.7rem 1rem;
+  padding: .7rem 1rem;
   text-align: left;
 }
 .accounts-table th {
@@ -398,13 +398,13 @@ html, body {
 .nav-icon {
   width: 20px;
   height: 20px;
-  margin-right: 0.5rem;
+  margin-right: .5rem;
   vertical-align: middle;
 }
 .nav-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 .nav-item.active .nav-icon,
 .nav-item:hover .nav-icon {
@@ -449,16 +449,16 @@ html, body {
   }
   .dashboard-nav {
     flex-wrap: wrap;
-    gap: 0.5rem;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
+    gap: .5rem;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
   }
   .nav-item, .nav-arrow-btn {
-    font-size: 0.95rem;
-    padding: 0.4rem 0.8rem;
+    font-size: .95rem;
+    padding: .4rem .8rem;
   }
   .dashboard-side {
-    gap: 0.7rem;
+    gap: .7rem;
   }
   .section-title {
     font-size: 1rem;
@@ -474,54 +474,54 @@ html, body {
   .dashboard-header {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.7rem;
-    padding: 1rem 0.5rem 0.7rem;
+    gap: .7rem;
+    padding: 1rem .5rem .7rem;
   }
   .dashboard-root {
     min-width: 0;
   }
   .dashboard-top {
     flex-direction: column;
-    gap: 0.7rem;
+    gap: .7rem;
   }
   .work-queue,
   .dashboard-side,
   .accounts-table-section {
-    padding: 0.7rem;
-    border-radius: 0.7rem;
+    padding: .7rem;
+    border-radius: .7rem;
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
   }
   .queue-table th, .queue-table td,
   .accounts-table th, .accounts-table td {
-    padding: 0.4rem 0.5rem;
-    font-size: 0.92rem;
+    padding: .4rem .5rem;
+    font-size: .92rem;
   }
   .section-title {
-    font-size: 0.97rem;
-    margin-bottom: 0.5rem;
+    font-size: .97rem;
+    margin-bottom: .5rem;
   }
   .tabs {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: .5rem;
   }
   .accounts-controls {
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: .5rem;
   }
   .search-bar {
     min-width: 100px;
-    font-size: 0.95rem;
-    padding: 0.4rem 0.7rem;
+    font-size: .95rem;
+    padding: .4rem .7rem;
   }
   .nav-item, .nav-arrow-btn {
-    font-size: 0.9rem;
-    padding: 0.3rem 0.6rem;
+    font-size: .9rem;
+    padding: .3rem .6rem;
   }
   .quick-actions .quick-btn {
-    font-size: 0.95rem;
-    padding: 0.5rem 0;
+    font-size: .95rem;
+    padding: .5rem 0;
   }
   .queue-table,
   .accounts-table {
@@ -538,24 +538,24 @@ html, body {
     padding-right: 0.2rem;
   }
   .dashboard-header {
-    padding: 0.7rem 0.2rem 0.5rem;
+    padding: .7rem .2rem .5rem;
   }
   .dashboard-root {
-    font-size: 0.95rem;
+    font-size: .95rem;
   }
   .queue-table th, .queue-table td,
   .accounts-table th, .accounts-table td {
-    font-size: 0.85rem;
-    padding: 0.2rem;
+    font-size: .85rem;
+    padding: .2rem;
   }
   .user-avatar {
     width: 2rem;
     height: 2rem;
-    font-size: 0.95rem;
+    font-size: .95rem;
   }
   .nav-icon {
     width: 16px;
     height: 16px;
-    margin-right: 0.3rem;
+    margin-right: .3rem;
   }
 }
