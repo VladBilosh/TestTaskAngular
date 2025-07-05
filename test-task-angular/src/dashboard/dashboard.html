@@ -143,28 +143,41 @@
         </table>
       </div>
       <!-- Side Panel -->
-      <div class="dashboard-side">
-        <div class="portfolio-goals">
-          <div class="section-title">Portfolio goals</div>
-          <div class="goal-label">PORTFOLIO LOSS RATIO TARGET</div>
-          <div class="goal-bar" style="background: #232b44;">
-            <div class="goal-bar-red" style="width: 52%; background: #ef4444;"></div>
-            <div class="goal-bar-green" style="width: 48%; background: #10b981;"></div>
-            <span class="goal-bar-value">48%</span>
-          </div>
+       <div class="dashboard-side">
+         <div class="portfolio-goals">
+           <div class="section-title">Portfolio goals</div>
+           <div class="goal-label">PORTFOLIO LOSS RATIO TARGET</div>
+           <div class="goal-bar-multi">
+             <div class="goal-bar-multi-green" style="width: 48%"></div>
+          <div class="goal-bar-multi-red" style="width: 52%"></div>
+          <span class="goal-bar-value" style="left: 48%">48%</span>
+        
           <div class="goal-desc green">48% ON TARGET</div>
+      
           <div class="goal-label">RENEWAL RETENTION</div>
-          <div class="goal-bar" style="background: #232b44;">
-            <div class="goal-bar-green" style="width: 88%; background: #10b981;"></div>
-            <div class="goal-bar-red" style="width: 12%; background: #ef4444;"></div>
-            <span class="goal-bar-value">88%</span>
+          <div class="goal-bar-multi">
+          <div class="goal-bar-multi-green" style="width: 88%"></div>
+          <div class="goal-bar-multi-red" style="width: 12%"></div>
+          <span class="goal-bar-value" style="left: 88%">88%</span>
           </div>
           <div class="goal-desc green">ON TARGET</div>
+      
           <div class="goal-label">NEW BUSINESS TARGET</div>
-          <div class="goal-value">$8.1M <span class="goal-sub">/ $12M</span></div>
-          <div class="goal-label">ANNUAL GWP TARGET</div>
-          <div class="goal-value">$28.4M <span class="goal-sub">68%</span></div>
+          <div class="goal-bar-single">
+          <div class="goal-bar-single-fill" style="width: 68%"></div>
+          <span class="goal-bar-single-value">$8.1M</span>
+          <span class="goal-bar-single-max">$12M</span>
+          </div>
+            <div class="goal-bar-single-sub">67%</div>
+      
+        <div class="goal-label">ANNUAL GWP TARGET</div>
+        <div class="goal-bar-single">
+          <div class="goal-bar-single-fill" style="width: 68%"></div>
+          <span class="goal-bar-single-value">$28.4M</span>
+          <span class="goal-bar-single-max">$42M</span>
         </div>
+        <div class="goal-bar-single-sub">68%</div>
+      </div>
         <div class="quick-actions">
           <button class="quick-btn">New Submission</button>
           <button class="quick-btn">Quote Builder</button>
@@ -181,6 +194,7 @@
         </div>
       </div>
     </div>
+  </div>
     <!-- My Accounts Table -->
     <div class="accounts-table-section">
       <div class="section-title">My accounts</div>
