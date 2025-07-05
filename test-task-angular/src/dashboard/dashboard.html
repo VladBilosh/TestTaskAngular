@@ -8,19 +8,37 @@
     <input class="search-bar" type="text" placeholder="Search" />
     <div class="user-avatar">AR</div>
   </div>
+
   <!-- Navigation -->
   <div class="dashboard-nav">
-    <div class="nav-item" routerLink="/accounts" routerLinkActive="active">Accounts</div>
-    <div class="nav-item1" routerLink="/dashboard" routerLinkActive="active">Dashboard</div>
-    <div class="nav-item">Brokers</div>
-    <div class="nav-item">Submissions</div>
-    <div class="nav-item">Organizations</div>
-    <div class="nav-item">Goals & Rules</div>
-    <div class="nav-item">Admin</div>
-    <div class="nav-item">Admin</div>
-    <div class="nav-item">Admin</div>
-    <div class="nav-item">Admin</div>
-    <div class="nav-item">Admin</div>
+    <button class="nav-item" routerLink="/dashboard" routerLinkActive="active">
+      <img src="assets/icons/dashboard.svg" alt="Dashboard" class="nav-icon" />
+      Dashboard
+    </button>
+    <button class="nav-item" routerLink="/accounts" routerLinkActive="active">
+      <img src="assets/icons/accounts.svg" alt="Accounts" class="nav-icon" />
+      Accounts
+    </button>
+    <button class="nav-item" routerLink="/brokers" routerLinkActive="active">
+      <img src="assets/icons/brokers.svg" alt="Brokers" class="nav-icon" />
+      Brokers
+    </button>
+    <button class="nav-item" routerLink="/submissions" routerLinkActive="active">
+      <img src="assets/icons/submissions.svg" alt="Submissions" class="nav-icon" />
+      Submissions
+    </button>
+    <button class="nav-item" routerLink="/organizations" routerLinkActive="active">
+      <img src="assets/icons/organizations.svg" alt="Organizations" class="nav-icon" />
+      Organizations
+    </button>
+    <button class="nav-item" routerLink="/goals" routerLinkActive="active">
+      <img src="assets/icons/goals.svg" alt="Goals & Rules" class="nav-icon" />
+      Goals & Rules
+    </button>
+    <button class="nav-item" routerLink="/admin" routerLinkActive="active">
+      <img src="assets/icons/admin.svg" alt="Admin" class="nav-icon" />
+      Admin
+    </button>
     <span class="nav-arrow">&#8592;</span>
     <span class="nav-arrow">&#8594;</span>
   </div>
@@ -49,97 +67,96 @@
           </thead>
           <tbody>
             <tr>
-              <td><span class="avatar">SM</span> Sam Masters</td>
+              <td><span class="avatar">SM</span>Sam Masters</td>
               <td>NAMEX Tech Solutions<br><span class="sub">Cyber Liability</span></td>
               <td>Underwriter Referral</td>
               <td><span class="status-dot new"></span>New</td>
               <td>04/16/2025</td>
-              <td><span class="row-action">&#8942;</span></td>
+              <td><span class="row-action">⋮</span></td>
             </tr>
             <tr>
-              <td><span class="avatar">AW</span> Annalise Willis</td>
+              <td><span class="avatar">AW</span>Annalyse Willis</td>
               <td>Maritime Logistics Corp<br><span class="sub">Marine Cargo</span></td>
               <td>Underwriter Referral</td>
               <td><span class="status-dot new"></span>New</td>
               <td>04/16/2025</td>
-              <td><span class="row-action">&#8942;</span></td>
+              <td><span class="row-action">⋮</span></td>
             </tr>
             <tr>
-              <td><span class="avatar">PD</span> Patrick Devenport</td>
+              <td><span class="avatar">PD</span>Patrick Devenport</td>
               <td>GreenField Energy Ltd<br><span class="sub">Environmental</span></td>
               <td>Loss Control Request</td>
               <td><span class="status-dot new"></span>New</td>
               <td>04/16/2025</td>
-              <td><span class="row-action">&#8942;</span></td>
+              <td><span class="row-action">⋮</span></td>
             </tr>
             <tr>
-              <td><span class="avatar">AK</span> Ana Killian</td>
+              <td><span class="avatar">AK</span>Ana Killian</td>
               <td>NorthStar Financial Group<br><span class="sub">D&O Liability</span></td>
               <td>Underwriter Referral</td>
               <td><span class="status-dot pending"></span>Pending Review</td>
               <td>04/22/2025</td>
-              <td><span class="row-action">&#8942;</span></td>
+              <td><span class="row-action">⋮</span></td>
             </tr>
             <tr>
-              <td><span class="avatar">AK</span> Ana Killian</td>
+              <td><span class="avatar">AK</span>Ana Killian</td>
               <td>Alliance Healthcare Systems<br><span class="sub">Medical Malpractice</span></td>
               <td>Email</td>
               <td><span class="status-dot completed"></span>Completed</td>
               <td>04/28/2025</td>
-              <td><span class="row-action">&#8942;</span></td>
+              <td><span class="row-action">⋮</span></td>
             </tr>
             <tr>
-              <td><span class="avatar">MK</span> Me</td>
+              <td><span class="avatar">MK</span>Me</td>
               <td>QuantumTech Industries<br><span class="sub">Product Liability</span></td>
               <td>Email</td>
               <td><span class="status-dot completed"></span>Completed</td>
               <td>04/20/2025</td>
-              <td><span class="row-action">&#8942;</span></td>
+              <td><span class="row-action">⋮</span></td>
             </tr>
           </tbody>
         </table>
       </div>
-
-      <!-- Side Panels -->
+      <!-- Side Panel -->
       <div class="dashboard-side">
-        <!-- Portfolio Goals -->
         <div class="portfolio-goals">
           <div class="section-title">Portfolio goals</div>
           <div class="goal-label">PORTFOLIO LOSS RATIO TARGET</div>
-          <div class="goal-bar" style="height: 1.2rem;">
-            <div class="goal-bar-green" style="width: 48%;"></div>
-            <div class="goal-bar-yellow" style="width: 12%;"></div>
-            <div class="goal-bar-red" style="width: 40%;"></div>
+          <div class="goal-bar" style="background: #232b44;">
+            <div class="goal-bar-red" style="width: 52%; background: #ef4444;"></div>
+            <div class="goal-bar-green" style="width: 48%; background: #10b981;"></div>
             <span class="goal-bar-value">48%</span>
           </div>
           <div class="goal-desc green">48% ON TARGET</div>
           <div class="goal-label">RENEWAL RETENTION</div>
-          <div class="goal-value">88% <span class="goal-sub">ON TARGET</span></div>
+          <div class="goal-bar" style="background: #232b44;">
+            <div class="goal-bar-green" style="width: 88%; background: #10b981;"></div>
+            <div class="goal-bar-red" style="width: 12%; background: #ef4444;"></div>
+            <span class="goal-bar-value">88%</span>
+          </div>
+          <div class="goal-desc green">ON TARGET</div>
           <div class="goal-label">NEW BUSINESS TARGET</div>
           <div class="goal-value">$8.1M <span class="goal-sub">/ $12M</span></div>
           <div class="goal-label">ANNUAL GWP TARGET</div>
           <div class="goal-value">$28.4M <span class="goal-sub">68%</span></div>
         </div>
-        <!-- Quick Actions -->
         <div class="quick-actions">
           <button class="quick-btn">New Submission</button>
           <button class="quick-btn">Quote Builder</button>
           <button class="quick-btn">Risks Models</button>
           <button class="quick-btn">Documents Upload</button>
         </div>
-        <!-- Market Intelligence -->
         <div class="market-intel">
           <div class="section-title">Market intelligence</div>
           <ul>
-            <li><span class="dot red"></span>Rate hardening in Cyber market - +15% YoY</li>
+            <li><span class="dot red"></span>Rate hardening in Cyber market - <b>+15% YoY</b></li>
             <li><span class="dot yellow"></span>New capacity entering Marine market</li>
             <li><span class="dot blue"></span>Environmental regulatory changes in CA</li>
           </ul>
         </div>
       </div>
     </div>
-
-    <!-- Accounts Table -->
+    <!-- My Accounts Table -->
     <div class="accounts-table-section">
       <div class="section-title">My accounts</div>
       <div class="accounts-controls">
@@ -161,7 +178,7 @@
             <th>Loss Ratio</th>
             <th>Appetite</th>
             <th>Status</th>
-            <th>Trauge</th>
+            <th>Triage</th>
             <th>Winnability</th>
             <th></th>
           </tr>
@@ -174,12 +191,12 @@
             <td>04/16/2025</td>
             <td>$2.3M</td>
             <td>$2.8M</td>
-            <td class="loss-ratio green">32%</td>
-            <td class="appetite high">HIGH</td>
-            <td class="status active">Active</td>
-            <td>160</td>
-            <td class="winnability very-strong">Very Strong</td>
-            <td><span class="row-action">&#8942;</span></td>
+            <td><span class="loss-ratio green">32%</span></td>
+            <td><span class="appetite high">HIGH</span></td>
+            <td><span class="status active">Active</span></td>
+            <td>180</td>
+            <td><span class="winnability very-strong">Very Strong</span></td>
+            <td><span class="row-action">⋮</span></td>
           </tr>
           <tr>
             <td>Alliance Healthcare Systems<br><span class="sub">Mid-Market</span></td>
@@ -188,40 +205,40 @@
             <td>06/30/2025</td>
             <td>$1.7M</td>
             <td>$1.9M</td>
-            <td class="loss-ratio yellow">38%</td>
-            <td class="appetite medium">MEDIUM</td>
-            <td class="status under-review">Under review</td>
-            <td>156</td>
-            <td class="winnability strong">Strong</td>
-            <td><span class="row-action">&#8942;</span></td>
+            <td><span class="loss-ratio yellow">58%</span></td>
+            <td><span class="appetite medium">MEDIUM</span></td>
+            <td><span class="status under-review">Under review</span></td>
+            <td>165</td>
+            <td><span class="winnability strong">Strong</span></td>
+            <td><span class="row-action">⋮</span></td>
           </tr>
           <tr>
-            <td>Maritime Logistics Corp<br><span class="sub">Shipping Logistics</span></td>
+            <td>Maritime Logistics Corp<br><span class="sub">Shipping/Logistics</span></td>
             <td>Marine Cargo</td>
             <td>Marsh McLennan</td>
             <td>09/05/2025</td>
             <td>$875K</td>
             <td>$920K</td>
-            <td class="loss-ratio green">25%</td>
-            <td class="appetite high">HIGH</td>
-            <td class="status active">Active</td>
+            <td><span class="loss-ratio green">25%</span></td>
+            <td><span class="appetite high">HIGH</span></td>
+            <td><span class="status active">Active</span></td>
             <td>182</td>
-            <td class="winnability very-strong">Very Strong</td>
-            <td><span class="row-action">&#8942;</span></td>
+            <td><span class="winnability very-strong">Very Strong</span></td>
+            <td><span class="row-action">⋮</span></td>
           </tr>
           <tr>
             <td>GreenField Energy Ltd<br><span class="sub">Energy Sector</span></td>
             <td>Environmental Liability</td>
             <td>Aon Risk</td>
-            <td>07/29/2025</td>
+            <td>07/22/2025</td>
             <td>$1.2M</td>
             <td>$1.4M</td>
-            <td class="loss-ratio red">67%</td>
-            <td class="appetite cautious">CAUTIOUS</td>
-            <td class="status under-review">Under review</td>
-            <td>140</td>
-            <td class="winnability medium">Medium</td>
-            <td><span class="row-action">&#8942;</span></td>
+            <td><span class="loss-ratio red">67%</span></td>
+            <td><span class="appetite cautious">CAUTIOUS</span></td>
+            <td><span class="status under-review">Under review</span></td>
+            <td>158</td>
+            <td><span class="winnability medium">Medium</span></td>
+            <td><span class="row-action">⋮</span></td>
           </tr>
         </tbody>
       </table>

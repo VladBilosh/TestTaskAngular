@@ -318,6 +318,19 @@ html, body {
 .accounts-table tr:nth-child(odd) {
   background: #181f33;
 }
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .loss-ratio.green { color: #10b981; font-weight: 600; }
 .loss-ratio.yellow { color: #f59e42; font-weight: 600; }
 .loss-ratio.red { color: #ef4444; font-weight: 600; }
