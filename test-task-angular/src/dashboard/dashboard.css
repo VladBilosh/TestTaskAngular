@@ -15,6 +15,7 @@ html, body {
 .dashboard-header {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
   justify-content: space-between;
   padding: 2rem 2.5rem 1rem 2.5rem;
   background: #151c2e;
@@ -43,15 +44,25 @@ html, body {
   font-weight: bold;
   font-size: 1.1rem;
 }
+
+.header-greeting {
+  flex-shrink: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+}
+
 .search-bar {
   background: #232b44;
   border: none;
   border-radius: 1.2rem;
   padding: 0.6rem 1.2rem;
   color: #e6eaf6;
-  margin: 0 1.5rem;
   font-size: 1rem;
-  min-width: 180px;
+  min-width: 120px;
+  flex: 1 1 auto;
+  margin: 0 1.5rem 0 1.5rem;
+  max-width: 600px;
 }
 
 .dashboard-nav {
@@ -336,17 +347,6 @@ html, body {
   background: #60a5fa;
   color: #fff;
 }
-.quick-actions .quick-btn:last-child {
-  background: #fff;
-  color: #3b82f6;
-  border: 1.5px solid #3b82f6;
-}
-
-.quick-actions .quick-btn:last-child:hover {
-  background: #e0eaff;
-  color: #2563eb;
-  border-color: #2563eb;
-}
 
 .market-intel ul {
   list-style: none;
@@ -436,8 +436,6 @@ html, body {
   filter: brightness(0) invert(1); 
 }
 
-
-
 .loss-ratio.green { color: #10b981; font-weight: 600; }
 .loss-ratio.yellow { color: #f59e42; font-weight: 600; }
 .loss-ratio.red { color: #ef4444; font-weight: 600; }
@@ -449,3 +447,148 @@ html, body {
 .winnability.very-strong { color: #3b82f6; font-weight: 600; }
 .winnability.strong { color: #10b981; font-weight: 600; }
 .winnability.medium { color: #f59e42; font-weight: 600; }
+
+@media (max-width: 1200px) {
+  .dashboard-top {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .dashboard-side {
+    min-width: 0;
+    width: 100%;
+  }
+  .work-queue {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-header,
+  .dashboard-nav,
+  .dashboard-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .dashboard-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+  .nav-item, .nav-arrow-btn {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .dashboard-side {
+    gap: 0.7rem;
+  }
+  .section-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-header,
+  .dashboard-nav,
+  .dashboard-main {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+  }
+  .dashboard-root {
+    min-width: 0;
+  }
+  .dashboard-top {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .work-queue,
+  .dashboard-side,
+  .accounts-table-section {
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .queue-table th, .queue-table td,
+  .accounts-table th, .accounts-table td {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.92rem;
+  }
+  .section-title {
+    font-size: 0.97rem;
+    margin-bottom: 0.5rem;
+  }
+  .tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .accounts-controls {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .search-bar {
+    min-width: 100px;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.7rem;
+  }
+  .nav-item, .nav-arrow-btn {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .quick-actions .quick-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard-header,
+  .dashboard-nav,
+  .dashboard-main {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+  .dashboard-header {
+    padding: 0.7rem 0.2rem 0.5rem 0.2rem;
+  }
+  .dashboard-root {
+    font-size: 0.95rem;
+  }
+  .queue-table th, .queue-table td,
+  .accounts-table th, .accounts-table td {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.2rem;
+  }
+  .user-avatar {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.95rem;
+  }
+  .nav-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .queue-table,
+  .accounts-table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+}

@@ -8,11 +8,19 @@ body, .dashboard-root {
 
 .dashboard-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1.5rem;
+  justify-content: space-between;
   padding: 2rem 2.5rem 1rem 2.5rem;
   background: #151c2e;
   border-bottom: 1px solid #232b44;
+}
+
+.header-greeting {
+  flex-shrink: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
 }
 
 .greeting {
@@ -20,6 +28,20 @@ body, .dashboard-root {
   font-weight: 500;
   color: #b2b9d2;
 }
+
+.search-bar {
+  background: #232b44;
+  border: none;
+  border-radius: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  color: #e6eaf6;
+  font-size: 1rem;
+  min-width: 120px;
+  flex: 1 1 auto;
+  margin: 0 1.5rem 0 1.5rem;
+  max-width: 600px;
+}
+
 .tasks {
   margin-left: 1.5rem;
   font-size: 1.1rem;
@@ -38,22 +60,57 @@ body, .dashboard-root {
   font-size: 1.1rem;
 }
 
+/* Navigation */
 .dashboard-nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 1rem 2.5rem;
   background: #151c2e;
   border-bottom: 1px solid #232b44;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .nav-item {
   color: #b2b9d2;
   text-decoration: none;
   padding: 0.5rem 1.2rem;
   border-radius: 1.5rem;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
   cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid #232b44;
+  font-weight: 500;
+  background: none;
+  box-shadow: none;
+  gap: 0.5rem;
 }
 .nav-item.active, .nav-item:hover {
+  background: #3b82f6;
+  color: #fff;
+}
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+.nav-arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #181f33;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  color: #b2b9d2;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.nav-arrow-btn:hover {
   background: #232b44;
   color: #fff;
 }
@@ -93,22 +150,38 @@ body, .dashboard-root {
   color: #b2b9d2;
   margin-left: 2rem;
 }
+
+/* Needs Attention Card */
 .needs-attention {
-  background: #f59e42;
-  color: #fff;
-  border-radius: 0.7rem;
-  padding: 0.3rem 1rem;
-  font-size: 0.95rem;
+  background: none;
+  color: #f59e42;
+  border: 2px solid #f59e42;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  min-width: 280px;
+  box-shadow: 0 2px 12px #0002;
 }
 .account-alerts {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 0;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  color: #f59e42;
-  font-size: 0.95rem;
+  flex-direction: row;
+  gap: 2rem;
+}
+.account-alerts div {
+  color: #b2b9d2;
+  font-size: 0.97rem;
 }
 
+/* Metrics */
 .metrics-row {
   display: flex;
   gap: 1.5rem;
@@ -121,6 +194,9 @@ body, .dashboard-root {
   flex: 1;
   min-width: 180px;
   box-shadow: 0 2px 12px #0002;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .metric-title {
   color: #b2b9d2;
@@ -128,7 +204,7 @@ body, .dashboard-root {
   margin-bottom: 0.5rem;
 }
 .metric-value {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #fff;
 }
@@ -137,16 +213,17 @@ body, .dashboard-root {
 }
 .metric-sub {
   color: #b2b9d2;
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-left: 0.5rem;
 }
 .metric-bars div {
   display: flex;
   justify-content: space-between;
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 0.3rem;
 }
 
+/* Policies */
 .policies-row {
   display: flex;
   gap: 1rem;
@@ -160,6 +237,8 @@ body, .dashboard-root {
   font-weight: 500;
   flex: 1;
   text-align: center;
+  font-size: 1.1rem;
+  border-left: 4px solid transparent;
 }
 .policy-card.marine { border-left: 4px solid #3b82f6; }
 .policy-card.liability { border-left: 4px solid #f59e42; }
@@ -167,11 +246,13 @@ body, .dashboard-root {
 .policy-card.property { border-left: 4px solid #9333ea; }
 .policy-card.umbrella { border-left: 4px solid #ef4444; }
 
+/* Status Steps */
 .status-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 2rem;
+  gap: 2rem;
 }
 .status-steps {
   display: flex;
@@ -182,7 +263,8 @@ body, .dashboard-root {
   background: #232b44;
   border-radius: 1rem;
   padding: 0.5rem 1.2rem;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 .step.active {
   background: #3b82f6;
@@ -190,9 +272,10 @@ body, .dashboard-root {
 }
 .compliance {
   display: flex;
-  gap: 1rem;
-  font-size: 0.95rem;
+  gap: 1.2rem;
+  font-size: 1.1rem;
   color: #10b981;
+  flex-wrap: wrap;
 }
 
 .account-details {
@@ -327,4 +410,97 @@ body, .dashboard-root {
 }
 .policies-table tr:nth-child(odd) {
   background: #181f33;
+}
+
+/* Adaptability */
+@media (max-width: 1200px) {
+  .dashboard-header,
+  .dashboard-nav,
+  .dashboard-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .metrics-row, .policies-row, .status-row, .account-details {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .account-summary {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .needs-attention {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .dashboard-header,
+  .dashboard-nav,
+  .dashboard-main {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+  }
+  .search-bar {
+    margin: 0.7rem 0;
+    max-width: 100%;
+  }
+  .metrics-row, .policies-row, .status-row, .account-details {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .account-summary {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
+@media (max-width: 700px) {
+  .dashboard-header,
+  .dashboard-nav,
+  .dashboard-main {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+  .dashboard-header {
+    padding: 0.7rem 0.2rem 0.5rem 0.2rem;
+  }
+  .dashboard-root {
+    font-size: 0.95rem;
+  }
+  .metrics-row, .policies-row, .status-row, .account-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .account-summary {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .user-avatar {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.95rem;
+  }
+  .nav-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.3rem;
+  }
+  .policy-card {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+  .step {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .compliance {
+    font-size: 1rem;
+    gap: 0.7rem;
+  }
 }

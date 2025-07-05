@@ -1,20 +1,46 @@
 <div class="dashboard-root">
+  <!-- Header -->
   <header class="dashboard-header">
-    <div>
+    <div class="header-greeting">
       <span class="greeting">Hi Arthur, welcome!</span>
-      <span class="tasks">You have <b>12 open tasks.</b></span>
+      <span class="tasks">You have 12 open tasks.</span>
     </div>
+    <input class="search-bar" type="text" placeholder="Search" />
     <div class="user-avatar">AR</div>
   </header>
 
-    <nav class="dashboard-nav">
-    <button class="nav-item" routerLink="/accounts" routerLinkActive="active">Accounts</button>
-    <button class="nav-item" (click)="goToDashboard()">Dashboard</button>
-    <button class="nav-item" routerLink="/brokers" routerLinkActive="active">Brokers</button>
-    <button class="nav-item" routerLink="/submissions" routerLinkActive="active">Submissions</button>
-    <button class="nav-item" routerLink="/organizations" routerLinkActive="active">Organizations</button>
-    <button class="nav-item" routerLink="/goals" routerLinkActive="active">Goals & Rules</button>
-    <button class="nav-item" routerLink="/admin" routerLinkActive="active">Admin</button>
+  <!-- Navigation -->
+  <nav class="dashboard-nav">
+    <button class="nav-item" (click)="goToDashboard()">
+      <img src="/TestTaskAngular/test-task-angular/src/icons/Dashboard.png" alt="Dashboard" class="nav-icon" />
+      Dashboard
+    </button>
+    <button class="nav-item" routerLink="/accounts" routerLinkActive="active">
+      <img src="/TestTaskAngular/test-task-angular/src/icons/Accounts.png" alt="Accounts" class="nav-icon" />
+      Accounts
+    </button>
+    <button class="nav-item" routerLink="/brokers" routerLinkActive="active">
+      <img src="/TestTaskAngular/test-task-angular/src/icons/Brokers.png" alt="Brokers" class="nav-icon" />
+      Brokers
+    </button>
+    <button class="nav-item" routerLink="/submissions" routerLinkActive="active">
+      <img src="/TestTaskAngular/test-task-angular/src/icons/Submissions.png" alt="Submissions" class="nav-icon" />
+      Submissions
+    </button>
+    <button class="nav-item" routerLink="/organizations" routerLinkActive="active">
+      <img src="/TestTaskAngular/test-task-angular/src/icons/Organizations.png" alt="Organizations" class="nav-icon" />
+      Organizations
+    </button>
+    <button class="nav-item" routerLink="/goals" routerLinkActive="active">
+      <img src="/TestTaskAngular/test-task-angular/src/icons/Goal and Rules.png" alt="Goals & Rules" class="nav-icon" />
+      Goals & Rules
+    </button>
+    <button class="nav-item" routerLink="/admin" routerLinkActive="active">
+      <img src="/TestTaskAngular/test-task-angular/src/icons/Admin.png" alt="Admin" class="nav-icon" />
+      Admin
+    </button>
+    <button class="nav-arrow-btn"><span class="nav-arrow">&#8592;</span></button>
+    <button class="nav-arrow-btn"><span class="nav-arrow">&#8594;</span></button>
   </nav>
 
   <main class="dashboard-main">
